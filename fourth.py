@@ -23,7 +23,10 @@ def polynomialWithKoef (list_ : list):
     for i in list_:
         if i > 0:
             if degreeCount > 0:
-                listOfPoly.append(str(i) + f'x{degrees[degreeCount]}')
+                if i != 1:
+                    listOfPoly.append(str(i) + f'x{degrees[degreeCount]}')
+                else:
+                    listOfPoly.append(f'x{degrees[degreeCount]}')
             else:
                 listOfPoly.append(str(i))
         degreeCount -= 1  
